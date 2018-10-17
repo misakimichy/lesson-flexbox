@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Flexbox | warp and order</title>
+
+<style type="text/css">
+.box {
+    height: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: lime;
+    width: 100%;
+    order: 1;
+}
+
+.red {
+    background-color: red;
+    width: 50%;
+    order: 2;
+}
+
+.orange {
+    background-color: orange;
+    width: 50%;
+    order: 3;
+}
+
+footer {
+    background-color: lightgreen;
+    width: 100%;
+    order: 4;
+}
+
+.light_blue {
+    background-color: lightblue;
+    width: 20%;
+    order: 5;
+}
+
+.dark_blue {
+    background-color: darkblue;
+    width: 60%;
+    order: 6;
+}
+
+.green {
+    background-color: green;
+    width: 20%;
+    order: 7;
+}
+
+@media screen and (min-width: 651px) {
+    header {width: 100%; order: 1;}
+    .red {width: 50%; order: 2;}
+    .orange {width: 50%; order: 3;}
+    footer {width: 50%; order: 4;}
+    .light-blue {width: 50%; order: 5;}
+    .dark-blue {width: 50%; order: 6;}
+    .green {width: 50%; order: 7;}
+}
+
+</style>
+</head>
+
+<body>
+<div class=container>
+    <header class="box lime"></header>
+    <div class="box dark_blue"></div>
+    <div class="box light_blue"></div>
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box orange"></div>
+    <footer class="box light_green"></footer>
+</div>
+</body>
+</html>
